@@ -1,2 +1,3 @@
 # ICDPython
-Disciplina Introdução a Ciência de Dados
+Disciplina Introdução à Ciência de Dados com o Professor Robaina
+
