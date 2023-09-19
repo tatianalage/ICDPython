@@ -7858,7 +7858,7 @@ DateTime
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Direcionamento">Direcionamento<a class="anchor-link" href="#Direcionamento">¶</a></h4>
+<h3 id="Direcionamento">Direcionamento<a class="anchor-link" href="#Direcionamento">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8155,7 +8155,7 @@ DateTime
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="Cont%C3%A1bil">Contábil<a class="anchor-link" href="#Cont%C3%A1bil">¶</a></h4>
+<h3 id="Cont%C3%A1bil">Contábil<a class="anchor-link" href="#Cont%C3%A1bil">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8521,7 +8521,7 @@ DateTime
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8533,28 +8533,7 @@ DateTime
 <span class="n">credito_pf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">valor_contratado_pf</span><span class="p">,</span> <span class="n">indexadores_pf</span><span class="p">,</span> <span class="n">taxa_pf</span><span class="p">,</span> <span class="n">ltv_pf</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1"># Adiciona PF ao início do nome das colunas para sinalizar Pessoa Física </span>
 <span class="n">credito_pf</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="o">+</span> <span class="s1">'_PF'</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">credito_pf</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">credito_pf</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Index(['VC_Comercial_PF', 'VC_Home Equity_PF', 'VC_Livre_PF', 'VC_FGTS_PF',
-       'VC_SFH_PF', 'Credito_Prefixado_PF', 'Credito_IPCA_PF',
-       'Credito_Outros_PF', 'Credito_TR_PF', 'Credito_Taxa_SFH_PF',
-       'Credito_Taxa_FGTS_PF', 'Credito_Taxa_Livre_PF',
-       'Credito_Taxa_Comercial_PF', 'Credito_Taxa_Home Equity_PF',
-       'Credito_LTV_SFH_PF', 'Credito_LTV_FGTS_PF', 'Credito_LTV_Livre_PF',
-       'Credito_LTV_Comercial_PF', 'Credito_LTV_Home Equity_PF'],
-      dtype='object')
-</pre>
 </div>
 </div>
 </div>
@@ -8660,7 +8639,7 @@ DateTime
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8672,25 +8651,7 @@ DateTime
 <span class="n">credito_pj</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">valor_contratado_pj</span><span class="p">,</span> <span class="n">indexadores_pj</span><span class="p">,</span> <span class="n">taxa_pj</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1"># Adiciona PJ ao início do nome das colunas para sinalizar Pessoa Jurídica</span>
 <span class="n">credito_pj</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="o">+</span> <span class="s1">'_PJ'</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">credito_pj</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">credito_pj</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Index(['VC_Comercial_PJ', 'VC_FGTS_PJ', 'VC_Livre_PJ', 'VC_SFH_PJ',
-       'Credito_IPCA_PJ', 'Credito_Outros_PJ', 'Credito_CDI_PJ',
-       'Credito_Prefixado_PJ', 'Credito_TR_PJ', 'Credito_SFH_PJ',
-       'Credito_FGTS_PJ', 'Credito_Livre_PJ', 'Credito_Comercial_PJ'],
-      dtype='object')
-</pre>
 </div>
 </div>
 </div>
@@ -8789,8 +8750,6 @@ None
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Imprime as primeiras linhas do DataFrame</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">credito</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-<span class="c1"># Imprime as últimas linhas do DataFrame</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">credito</span><span class="o">.</span><span class="n">tail</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -8850,55 +8809,6 @@ DateTime
 2014-06-30             8.29              9.98                 12.99  
 2014-07-31             8.29             11.28                 13.77  
 2014-08-31             8.29             10.68                  8.78  
-
-[5 rows x 32 columns]
-            VC_Comercial_PF  VC_Home Equity_PF  VC_Livre_PF  VC_FGTS_PF  \
-DateTime                                                                  
-2022-12-31         0.077449           0.391262     1.603938    6.116908   
-2023-01-31         0.081258           0.353645     1.737360    3.927320   
-2023-02-28         0.057896           0.291580     1.519226    4.270565   
-2023-03-31         0.108131           0.476202     2.379673    5.058300   
-2023-04-30         0.075521           0.362983     1.850832    5.491689   
-
-            VC_SFH_PF  Credito_Prefixado_PF  Credito_IPCA_PF  \
-DateTime                                                       
-2022-12-31   7.279694              0.190633         0.094716   
-2023-01-31   7.917829              0.140636         0.104009   
-2023-02-28   6.849458              0.135842         0.107696   
-2023-03-31  10.052799              0.204558         0.324869   
-2023-04-30   7.307100              0.182760         0.133697   
-
-            Credito_Outros_PF  Credito_TR_PF  Credito_Taxa_SFH_PF  ...  \
-DateTime                                                           ...   
-2022-12-31           0.697303      14.486599                11.84  ...   
-2023-01-31           0.629009      13.143757                11.89  ...   
-2023-02-28           0.355985      12.389202                10.72  ...   
-2023-03-31           0.479756      17.065924                12.23  ...   
-2023-04-30           0.276183      14.495486                11.00  ...   
-
-              VC_SFH_PJ  Credito_IPCA_PJ  Credito_Outros_PJ  Credito_CDI_PJ  \
-DateTime                                                                      
-2022-12-31  1681.867654              NaN          94.305598             NaN   
-2023-01-31   486.991605              NaN         229.684015             NaN   
-2023-02-28   227.639854              NaN          14.686349             NaN   
-2023-03-31   411.291912           21.191          39.454324             NaN   
-2023-04-30   718.265995              NaN          11.051520             NaN   
-
-            Credito_Prefixado_PJ  Credito_TR_PJ  Credito_SFH_PJ  \
-DateTime                                                          
-2022-12-31           2654.607993    1312.223527           10.55   
-2023-01-31            122.500000     889.520764           11.86   
-2023-02-28            314.732086     570.657934            9.55   
-2023-03-31            166.100000    2452.642287           12.25   
-2023-04-30            382.103653    1183.850569           10.09   
-
-            Credito_FGTS_PJ  Credito_Livre_PJ  Credito_Comercial_PJ  
-DateTime                                                             
-2022-12-31            10.90              8.83                 10.42  
-2023-01-31            10.91              9.87                  9.96  
-2023-02-28             9.57              8.71                 11.13  
-2023-03-31            11.17             10.91                 12.43  
-2023-04-30             9.55              9.10                 13.28  
 
 [5 rows x 32 columns]
 </pre>
@@ -9704,8 +9614,6 @@ None
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Imprime as primeiras linhas do DataFrame</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">estoque</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-<span class="c1"># Imprime as últimas linhas do DataFrame</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">estoque</span><span class="o">.</span><span class="n">tail</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -9781,71 +9689,6 @@ DateTime
 2014-06-30             0.230506  
 2014-07-31             0.210054  
 2014-08-31             0.266968  
-
-[5 rows x 52 columns]
-            Estoque_Carteira_Comercial_PF  Estoque_Carteira_Home Equity_PF  \
-DateTime                                                                     
-2022-12-31                       2.226629                        15.492323   
-2023-01-31                       2.270384                        15.661224   
-2023-02-28                       2.292430                        15.740078   
-2023-03-31                       2.362093                        15.980947   
-2023-04-30                       2.409045                        16.138588   
-
-            Estoque_Carteira_Livre_PF  Estoque_Carteira_FGTS_PF  \
-DateTime                                                          
-2022-12-31                  76.025962                390.974836   
-2023-01-31                  77.088601                393.210084   
-2023-02-28                  77.958965                395.891578   
-2023-03-31                  79.535195                399.387492   
-2023-04-30                  80.713873                402.978885   
-
-            Estoque_Carteira_SFH_PF  Credito_Prefixado_PF  Credito_IPCA_PF  \
-DateTime                                                                     
-2022-12-31               462.850950              0.190633         0.094716   
-2023-01-31               467.050336              0.140636         0.104009   
-2023-02-28               470.445838              0.135842         0.107696   
-2023-03-31               476.531961              0.204558         0.324869   
-2023-04-30               480.468710              0.182760         0.133697   
-
-            Credito_Outros_PF  Credito_TR_PF  Estoque_Risco_AA_PF  ...  \
-DateTime                                                           ...   
-2022-12-31           0.697303      14.486599                68.84  ...   
-2023-01-31           0.629009      13.143757                69.00  ...   
-2023-02-28           0.355985      12.389202                68.94  ...   
-2023-03-31           0.479756      17.065924                69.12  ...   
-2023-04-30           0.276183      14.495486                69.00  ...   
-
-            Estoque_Risco_C_PJ  Estoque_Risco_D ou mais_PJ  Estoque_SFH_PJ  \
-DateTime                                                                     
-2022-12-31                5.48                       13.66            0.30   
-2023-01-31                5.70                       13.71            0.29   
-2023-02-28                5.61                       13.34            0.51   
-2023-03-31                5.29                       12.67            0.34   
-2023-04-30                3.61                       12.37            0.62   
-
-            Estoque_Livre_PJ  Estoque_FGTS_PJ  Estoque_Comercial_PJ  \
-DateTime                                                              
-2022-12-31              1.71             1.59                  0.24   
-2023-01-31              1.43             1.69                  0.24   
-2023-02-28              1.77             1.90                  0.24   
-2023-03-31              1.74             1.76                  0.06   
-2023-04-30              1.98             1.98                  6.49   
-
-            Estoque_AP_FGTS_PJ  Estoque_AP_SFH_PJ  Estoque_AP_Comercial_PJ  \
-DateTime                                                                     
-2022-12-31                 NaN           0.191667                 0.747182   
-2023-01-31                 NaN           0.193743                 0.722019   
-2023-02-28                 NaN           0.202249                 0.726983   
-2023-03-31                 NaN           0.180675                 0.688571   
-2023-04-30                 NaN           0.172137                 0.686716   
-
-            Estoque_AP_Livre_PJ  
-DateTime                         
-2022-12-31             3.595104  
-2023-01-31             3.565294  
-2023-02-28             3.628255  
-2023-03-31             3.642879  
-2023-04-30             3.642507  
 
 [5 rows x 52 columns]
 </pre>
@@ -10588,6 +10431,269 @@ None
         <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">col</span><span class="p">:</span> <span class="n">novo_nome_coluna</span><span class="p">})</span>
 <span class="c1"># print(df.columns)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>SBPE</th>
+<th>LCI</th>
+<th>CRI</th>
+<th>LIG</th>
+<th>LH</th>
+<th>Direcionamento_Aplicacao</th>
+<th>Direcionamento_Aquisicao</th>
+<th>Direcionamento_Construcao</th>
+<th>Direcionamento_Reforma_Ampliacao</th>
+<th>Financiamento_Comercial</th>
+<th>...</th>
+<th>Estoque_Livre_PJ</th>
+<th>Estoque_FGTS_PJ</th>
+<th>Estoque_Comercial_PJ</th>
+<th>Estoque_AP_FGTS_PJ</th>
+<th>Estoque_AP_SFH_PJ</th>
+<th>Estoque_AP_Comercial_PJ</th>
+<th>Estoque_AP_Livre_PJ</th>
+<th>Imobiliario_PIB</th>
+<th>Indice_Valores_de_Garantia</th>
+<th>Mediana_Valores_de_Garantia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>count</th>
+<td>109.000000</td>
+<td>109.000000</td>
+<td>109.000000</td>
+<td>54.000000</td>
+<td>102.000000</td>
+<td>109.000000</td>
+<td>109.000000</td>
+<td>109.000000</td>
+<td>52.000000</td>
+<td>109.000000</td>
+<td>...</td>
+<td>109.000000</td>
+<td>109.000000</td>
+<td>105.000000</td>
+<td>0.0</td>
+<td>109.000000</td>
+<td>109.000000</td>
+<td>109.000000</td>
+<td>109.000000</td>
+<td>109.000000</td>
+<td>109.000000</td>
+</tr>
+<tr>
+<th>mean</th>
+<td>622.113425</td>
+<td>164.422881</td>
+<td>79.217958</td>
+<td>34.803963</td>
+<td>0.958290</td>
+<td>464.025662</td>
+<td>533.736825</td>
+<td>42.947682</td>
+<td>564.759796</td>
+<td>1.879770</td>
+<td>...</td>
+<td>5.996789</td>
+<td>1.470367</td>
+<td>2.535238</td>
+<td>NaN</td>
+<td>1.224035</td>
+<td>1.485780</td>
+<td>3.056549</td>
+<td>9.247615</td>
+<td>567.160367</td>
+<td>178479.174312</td>
+</tr>
+<tr>
+<th>std</th>
+<td>114.726873</td>
+<td>34.003273</td>
+<td>25.957792</td>
+<td>29.890667</td>
+<td>0.351409</td>
+<td>81.798012</td>
+<td>168.306809</td>
+<td>17.347505</td>
+<td>41.636823</td>
+<td>0.469749</td>
+<td>...</td>
+<td>7.457258</td>
+<td>0.882337</td>
+<td>2.438189</td>
+<td>NaN</td>
+<td>0.840675</td>
+<td>1.224140</td>
+<td>1.868412</td>
+<td>0.487744</td>
+<td>46.654058</td>
+<td>30849.423003</td>
+</tr>
+<tr>
+<th>min</th>
+<td>480.464917</td>
+<td>114.102520</td>
+<td>40.795547</td>
+<td>0.177202</td>
+<td>0.018120</td>
+<td>325.585144</td>
+<td>270.757417</td>
+<td>19.255190</td>
+<td>512.119403</td>
+<td>1.254153</td>
+<td>...</td>
+<td>0.420000</td>
+<td>0.120000</td>
+<td>0.000000</td>
+<td>NaN</td>
+<td>0.168163</td>
+<td>0.002799</td>
+<td>0.159882</td>
+<td>7.480000</td>
+<td>520.780000</td>
+<td>145000.000000</td>
+</tr>
+<tr>
+<th>25%</th>
+<td>510.620427</td>
+<td>137.750671</td>
+<td>65.419271</td>
+<td>11.308063</td>
+<td>0.925513</td>
+<td>387.192224</td>
+<td>393.501215</td>
+<td>29.165905</td>
+<td>528.116359</td>
+<td>1.426575</td>
+<td>...</td>
+<td>1.450000</td>
+<td>0.740000</td>
+<td>0.260000</td>
+<td>NaN</td>
+<td>0.401197</td>
+<td>0.596731</td>
+<td>1.059223</td>
+<td>9.100000</td>
+<td>529.770000</td>
+<td>155000.000000</td>
+</tr>
+<tr>
+<th>50%</th>
+<td>599.508867</td>
+<td>165.544869</td>
+<td>73.005338</td>
+<td>21.926618</td>
+<td>1.061776</td>
+<td>452.574064</td>
+<td>485.512991</td>
+<td>36.337262</td>
+<td>555.566737</td>
+<td>1.818669</td>
+<td>...</td>
+<td>2.920000</td>
+<td>1.320000</td>
+<td>1.920000</td>
+<td>NaN</td>
+<td>1.271253</td>
+<td>1.224052</td>
+<td>3.595104</td>
+<td>9.410000</td>
+<td>547.030000</td>
+<td>165000.000000</td>
+</tr>
+<tr>
+<th>75%</th>
+<td>757.535898</td>
+<td>183.879294</td>
+<td>81.616554</td>
+<td>56.932670</td>
+<td>1.116405</td>
+<td>516.834464</td>
+<td>652.302756</td>
+<td>53.741841</td>
+<td>600.540329</td>
+<td>2.262857</td>
+<td>...</td>
+<td>9.430000</td>
+<td>2.130000</td>
+<td>4.140000</td>
+<td>NaN</td>
+<td>1.877639</td>
+<td>2.341957</td>
+<td>4.736214</td>
+<td>9.560000</td>
+<td>610.300000</td>
+<td>210000.000000</td>
+</tr>
+<tr>
+<th>max</th>
+<td>801.437986</td>
+<td>284.425993</td>
+<td>151.744832</td>
+<td>97.786173</td>
+<td>1.494045</td>
+<td>618.514193</td>
+<td>876.639352</td>
+<td>82.898815</td>
+<td>645.239690</td>
+<td>2.725520</td>
+<td>...</td>
+<td>40.290000</td>
+<td>4.390000</td>
+<td>9.690000</td>
+<td>NaN</td>
+<td>2.667923</td>
+<td>4.043584</td>
+<td>5.789070</td>
+<td>9.820000</td>
+<td>648.120000</td>
+<td>250000.000000</td>
+</tr>
+</tbody>
+</table>
+<p>8 rows × 99 columns</p>
+</div>
 </div>
 </div>
 </div>
