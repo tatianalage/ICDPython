@@ -7522,7 +7522,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">recursos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">sbpe</span><span class="p">,</span> <span class="n">titulos</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Merge dos DataFrames sbpe e titulos</span>
+<span class="n">recursos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">sbpe</span><span class="p">,</span> <span class="n">titulos</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'DateTime'</span><span class="p">)</span>
 <span class="c1"># Converter indice para datetime</span>
 <span class="n">recursos</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">recursos</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="c1"># Converter colunas para float</span>
@@ -8403,8 +8404,8 @@ Coeficiente de Variação                               7.372483
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Concatena os DataFrames financiamentos e bndu ao longo do eixo das colunas (axis=1)</span>
-<span class="n">contabil</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">financiamentos</span><span class="p">,</span> <span class="n">bndu</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Merge dos DataFrames financiamentos e bndu</span>
+<span class="n">contabil</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">financiamentos</span><span class="p">,</span> <span class="n">bndu</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'DateTime'</span><span class="p">)</span>
 <span class="c1"># Converter indice para datetime    </span>
 <span class="n">contabil</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">contabil</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="c1"># Converter colunas para float</span>
@@ -8424,15 +8425,15 @@ Coeficiente de Variação                               7.372483
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
-DatetimeIndex: 109 entries, 2014-04-30 to 2023-04-30
+DatetimeIndex: 81 entries, 2014-04-30 to 2020-12-31
 Data columns (total 3 columns):
  #   Column                     Non-Null Count  Dtype  
 ---  ------                     --------------  -----  
- 0   Financiamento_Comercial    109 non-null    float64
- 1   Financiamento_Residencial  109 non-null    float64
+ 0   Financiamento_Comercial    81 non-null     float64
+ 1   Financiamento_Residencial  81 non-null     float64
  2   BNDU_Imobiliário           81 non-null     float64
 dtypes: float64(3)
-memory usage: 3.4 KB
+memory usage: 2.5 KB
 None
 </pre>
 </div>
@@ -10022,8 +10023,8 @@ max           16.110000             17.240000
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Concatena os DataFrames credito_pessoa_fisica e credito_pessoa_juridica ao longo do eixo das colunas (axis=1)</span>
-<span class="n">credito</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">credito_pf</span><span class="p">,</span> <span class="n">credito_pj</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Merge dos DataFrames credito_pessoa_fisica e credito_pessoa_juridica </span>
+<span class="n">credito</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">credito_pf</span><span class="p">,</span> <span class="n">credito_pj</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'DateTime'</span><span class="p">)</span>
 <span class="c1"># Converter índice para datetime</span>
 <span class="n">credito</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">credito</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="c1"># Converter colunas para float</span>
@@ -10047,15 +10048,15 @@ DatetimeIndex: 109 entries, 2014-04-30 to 2023-04-30
 Data columns (total 32 columns):
  #   Column                       Non-Null Count  Dtype  
 ---  ------                       --------------  -----  
- 0   VC_Comercial_PF              109 non-null    float64
- 1   VC_Home Equity_PF            109 non-null    float64
- 2   VC_Livre_PF                  109 non-null    float64
- 3   VC_FGTS_PF                   109 non-null    float64
- 4   VC_SFH_PF                    109 non-null    float64
- 5   Credito_Prefixado_PF         109 non-null    float64
- 6   Credito_IPCA_PF              90 non-null     float64
- 7   Credito_Outros_PF            109 non-null    float64
- 8   Credito_TR_PF                109 non-null    float64
+ 0   VC_Comercial_PF              0 non-null      float64
+ 1   VC_Home Equity_PF            0 non-null      float64
+ 2   VC_Livre_PF                  0 non-null      float64
+ 3   VC_FGTS_PF                   0 non-null      float64
+ 4   VC_SFH_PF                    0 non-null      float64
+ 5   Credito_Prefixado_PF         0 non-null      float64
+ 6   Credito_IPCA_PF              0 non-null      float64
+ 7   Credito_Outros_PF            0 non-null      float64
+ 8   Credito_TR_PF                0 non-null      float64
  9   Credito_Taxa_SFH_PF          109 non-null    float64
  10  Credito_Taxa_FGTS_PF         109 non-null    float64
  11  Credito_Taxa_Livre_PF        109 non-null    float64
@@ -10127,35 +10128,35 @@ DateTime
 
             Credito_Outros_PF  Credito_TR_PF  Credito_Taxa_SFH_PF  ...  \
 DateTime                                                           ...   
-2014-04-30           0.042165       9.897111                 8.97  ...   
-2014-05-31           0.031836      11.993413                 9.02  ...   
-2014-06-30           0.031728      10.937771                 9.04  ...   
-2014-07-31           0.031111      11.691641                 9.21  ...   
-2014-08-31           0.017469      11.022828                 9.09  ...   
+2014-04-30           0.042165       9.897111                  NaN  ...   
+2014-05-31           0.031836      11.993413                  NaN  ...   
+2014-06-30           0.031728      10.937771                  NaN  ...   
+2014-07-31           0.031111      11.691641                  NaN  ...   
+2014-08-31           0.017469      11.022828                  NaN  ...   
 
-             VC_SFH_PJ  Credito_IPCA_PJ  Credito_Outros_PJ  Credito_CDI_PJ  \
-DateTime                                                                     
-2014-04-30  638.830258              NaN                NaN      335.450000   
-2014-05-31  532.539998              NaN           0.768516      394.080000   
-2014-06-30  440.405550              NaN                NaN      179.757322   
-2014-07-31  727.746233              NaN                NaN       22.900000   
-2014-08-31  547.840909              NaN                NaN             NaN   
+            VC_SFH_PJ  Credito_IPCA_PJ  Credito_Outros_PJ  Credito_CDI_PJ  \
+DateTime                                                                    
+2014-04-30        NaN              NaN                NaN             NaN   
+2014-05-31        NaN              NaN                NaN             NaN   
+2014-06-30        NaN              NaN                NaN             NaN   
+2014-07-31        NaN              NaN                NaN             NaN   
+2014-08-31        NaN              NaN                NaN             NaN   
 
             Credito_Prefixado_PJ  Credito_TR_PJ  Credito_SFH_PJ  \
 DateTime                                                          
-2014-04-30            102.510513    1123.626611           10.54   
-2014-05-31            301.450725    2783.506263           10.52   
-2014-06-30            292.329056    1421.392039           10.15   
-2014-07-31             20.000000     968.806176           11.06   
-2014-08-31             45.469845    1026.957350           10.58   
+2014-04-30                   NaN            NaN             NaN   
+2014-05-31                   NaN            NaN             NaN   
+2014-06-30                   NaN            NaN             NaN   
+2014-07-31                   NaN            NaN             NaN   
+2014-08-31                   NaN            NaN             NaN   
 
             Credito_FGTS_PJ  Credito_Livre_PJ  Credito_Comercial_PJ  
 DateTime                                                             
-2014-04-30             8.29             10.36                 12.83  
-2014-05-31             8.29              9.15                 12.54  
-2014-06-30             8.29              9.98                 12.99  
-2014-07-31             8.29             11.28                 13.77  
-2014-08-31             8.29             10.68                  8.78  
+2014-04-30              NaN               NaN                   NaN  
+2014-05-31              NaN               NaN                   NaN  
+2014-06-30              NaN               NaN                   NaN  
+2014-07-31              NaN               NaN                   NaN  
+2014-08-31              NaN               NaN                   NaN  
 
 [5 rows x 32 columns]
 </pre>
@@ -11533,8 +11534,8 @@ max                NaN        2.667923              4.043584          5.789070
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Concatena os DataFrames estoque_pf e estoque_pj ao longo do eixo das colunas (axis=1)</span>
-<span class="n">estoque</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">estoque_pf</span><span class="p">,</span> <span class="n">estoque_pj</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Merge dos DataFrames estoque_pf e estoque_pj </span>
+<span class="n">estoque</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">estoque_pf</span><span class="p">,</span> <span class="n">estoque_pj</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'DateTime'</span><span class="p">)</span>
 <span class="c1"># Converter índice para datetime</span>
 <span class="n">estoque</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">estoque</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="c1"># Imprime as informações do DataFrame</span>
@@ -11822,8 +11823,10 @@ DateTime
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Concatena os DataFrames imobiliario_pib, ind_valores_garantia e med_valores_garantia ao longo do eixo das colunas (axis=1)</span>
-<span class="n">indices</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">imobiliario_pib</span><span class="p">,</span> <span class="n">ind_valores_garantia</span><span class="p">,</span> <span class="n">med_valores_garantia</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Merge dos DataFrames ind_valores_garantia e med_valores_garantia</span>
+<span class="n">valores_garantia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ind_valores_garantia</span><span class="p">,</span> <span class="n">med_valores_garantia</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'DateTime'</span><span class="p">)</span>
+<span class="c1"># Merge dos DataFrames valores_garantia e imobiliario_pib</span>
+<span class="n">indices</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">valores_garantia</span><span class="p">,</span> <span class="n">imobiliario_pib</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'DateTime'</span><span class="p">)</span>
 <span class="c1"># Converter índice para datetime</span>
 <span class="n">indices</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">indices</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="c1"># Converter colunas para float</span>
@@ -11847,9 +11850,9 @@ DatetimeIndex: 109 entries, 2014-04-30 to 2023-04-30
 Data columns (total 3 columns):
  #   Column                       Non-Null Count  Dtype  
 ---  ------                       --------------  -----  
- 0   Imobiliario_PIB              109 non-null    float64
- 1   Indice_Valores_de_Garantia   109 non-null    float64
- 2   Mediana_Valores_de_Garantia  109 non-null    int64  
+ 0   Indice_Valores_de_Garantia   109 non-null    float64
+ 1   Mediana_Valores_de_Garantia  109 non-null    int64  
+ 2   Imobiliario_PIB              109 non-null    float64
 dtypes: float64(2), int64(1)
 memory usage: 3.4 KB
 None
@@ -12161,7 +12164,8 @@ Coeficiente de Variação              5.274269                    8.225902
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
 DatetimeIndex: 109 entries, 2014-04-30 to 2023-04-30
-Data columns (total 99 columns):
+Freq: M
+Data columns (total 98 columns):
  #   Column                            Non-Null Count  Dtype  
 ---  ------                            --------------  -----  
  0   SBPE                              109 non-null    float64
@@ -12173,18 +12177,18 @@ Data columns (total 99 columns):
  6   Direcionamento_Aquisicao          109 non-null    float64
  7   Direcionamento_Construcao         109 non-null    float64
  8   Direcionamento_Reforma_Ampliacao  52 non-null     float64
- 9   Financiamento_Comercial           109 non-null    float64
- 10  Financiamento_Residencial         109 non-null    float64
+ 9   Financiamento_Comercial           81 non-null     float64
+ 10  Financiamento_Residencial         81 non-null     float64
  11  BNDU_Imobiliário                  81 non-null     float64
- 12  VC_Comercial_PF                   109 non-null    float64
- 13  VC_Home Equity_PF                 109 non-null    float64
- 14  VC_Livre_PF                       109 non-null    float64
- 15  VC_FGTS_PF                        109 non-null    float64
- 16  VC_SFH_PF                         109 non-null    float64
- 17  Credito_Prefixado_PF              109 non-null    float64
- 18  Credito_IPCA_PF                   90 non-null     float64
- 19  Credito_Outros_PF                 109 non-null    float64
- 20  Credito_TR_PF                     109 non-null    float64
+ 12  VC_Comercial_PF                   0 non-null      float64
+ 13  VC_Home Equity_PF                 0 non-null      float64
+ 14  VC_Livre_PF                       0 non-null      float64
+ 15  VC_FGTS_PF                        0 non-null      float64
+ 16  VC_SFH_PF                         0 non-null      float64
+ 17  Credito_Prefixado_PF              0 non-null      float64
+ 18  Credito_IPCA_PF                   0 non-null      float64
+ 19  Credito_Outros_PF                 0 non-null      float64
+ 20  Credito_TR_PF                     0 non-null      float64
  21  Credito_Taxa_SFH_PF               109 non-null    float64
  22  Credito_Taxa_FGTS_PF              109 non-null    float64
  23  Credito_Taxa_Livre_PF             109 non-null    float64
@@ -12213,10 +12217,10 @@ Data columns (total 99 columns):
  46  Estoque_Carteira_Livre_PF         109 non-null    float64
  47  Estoque_Carteira_FGTS_PF          109 non-null    float64
  48  Estoque_Carteira_SFH_PF           109 non-null    float64
- 49  Credito_Prefixado_PF              109 non-null    float64
- 50  Credito_IPCA_PF                   90 non-null     float64
- 51  Credito_Outros_PF                 109 non-null    float64
- 52  Credito_TR_PF                     109 non-null    float64
+ 49  Estoque_Prefixado_PF              109 non-null    float64
+ 50  Estoque_IPCA_PF                   94 non-null     float64
+ 51  Estoque_Outros_PF                 109 non-null    float64
+ 52  Estoque_TR_PF                     109 non-null    float64
  53  Estoque_Risco_AA_PF               109 non-null    float64
  54  Estoque_Risco_A_PF                109 non-null    float64
  55  Estoque_Risco_B_PF                109 non-null    float64
@@ -12242,29 +12246,28 @@ Data columns (total 99 columns):
  75  Estoque_Carteira_Comercial_PJ     109 non-null    float64
  76  Estoque_Carteira_Livre_PJ         109 non-null    float64
  77  Estoque_Carteira_SFH_PJ           109 non-null    float64
- 78  Credito_IPCA_PJ                   8 non-null      float64
- 79  Credito_Outros_PJ                 49 non-null     float64
- 80  Credito_CDI_PJ                    53 non-null     float64
- 81  Credito_Prefixado_PJ              95 non-null     float64
- 82  Credito_TR_PJ                     109 non-null    float64
- 83  Estoque_Risco_AA_PJ               109 non-null    float64
- 84  Estoque_Risco_A_PJ                109 non-null    float64
- 85  Estoque_Risco_B_PJ                109 non-null    float64
- 86  Estoque_Risco_C_PJ                109 non-null    float64
- 87  Estoque_Risco_D ou mais_PJ        109 non-null    float64
- 88  Estoque_SFH_PJ                    109 non-null    float64
- 89  Estoque_Livre_PJ                  109 non-null    float64
- 90  Estoque_FGTS_PJ                   109 non-null    float64
- 91  Estoque_Comercial_PJ              105 non-null    float64
- 92  Estoque_AP_FGTS_PJ                0 non-null      float64
- 93  Estoque_AP_SFH_PJ                 109 non-null    float64
- 94  Estoque_AP_Comercial_PJ           109 non-null    float64
- 95  Estoque_AP_Livre_PJ               109 non-null    float64
- 96  Imobiliario_PIB                   109 non-null    float64
- 97  Indice_Valores_de_Garantia        109 non-null    float64
- 98  Mediana_Valores_de_Garantia       109 non-null    int64  
-dtypes: float64(98), int64(1)
-memory usage: 85.2 KB
+ 78  Estoque_Prefixado_PJ              109 non-null    float64
+ 79  Estoque_IPCA_PJ                   94 non-null     float64
+ 80  Estoque_Outros_PJ                 109 non-null    float64
+ 81  Estoque_TR_PJ                     109 non-null    float64
+ 82  Estoque_Risco_AA_PJ               109 non-null    float64
+ 83  Estoque_Risco_A_PJ                109 non-null    float64
+ 84  Estoque_Risco_B_PJ                109 non-null    float64
+ 85  Estoque_Risco_C_PJ                109 non-null    float64
+ 86  Estoque_Risco_D ou mais_PJ        109 non-null    float64
+ 87  Estoque_SFH_PJ                    109 non-null    float64
+ 88  Estoque_Livre_PJ                  109 non-null    float64
+ 89  Estoque_FGTS_PJ                   109 non-null    float64
+ 90  Estoque_Comercial_PJ              105 non-null    float64
+ 91  Estoque_AP_FGTS_PJ                0 non-null      float64
+ 92  Estoque_AP_SFH_PJ                 109 non-null    float64
+ 93  Estoque_AP_Comercial_PJ           109 non-null    float64
+ 94  Estoque_AP_Livre_PJ               109 non-null    float64
+ 95  Indice_Valores_de_Garantia        109 non-null    float64
+ 96  Mediana_Valores_de_Garantia       109 non-null    int64  
+ 97  Imobiliario_PIB                   109 non-null    float64
+dtypes: float64(97), int64(1)
+memory usage: 84.3 KB
 None
 </pre>
 </div>
